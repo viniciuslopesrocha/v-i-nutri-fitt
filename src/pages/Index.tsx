@@ -22,7 +22,7 @@ const plans = [
     name: "Plano Premium",
     price: "R$ 257,90",
     description: "Experiência premium com acompanhamento completo, personalizado e estratégico para seus resultados.",
-    features: ["Plano 100% personalizado para o seu corpo e rotina", "Dieta adaptada ao seu nível de atividade física (sem achismo)", "Alimentação que cabe no seu bolso — sem comidas caras ou difíceis", "Fácil de seguir no dia a dia (sem dieta impossível)", "Ajustes estratégicos conforme sua evolução", "Lista de compras simples e prática", "Estratégia pensada para rotina corrida", "Acompanhamento próximo"],
+    features: ["Plano 100% personalizado para o seu corpo e rotina", "Plano alimentar adaptado ao seu nível de atividade física (sem achismo)", "Alimentação que cabe no seu bolso — sem comidas caras ou difíceis", "Fácil de seguir no dia a dia (sem estratégia impossível)", "Ajustes estratégicos conforme sua evolução", "Lista de compras simples e prática", "Estratégia pensada para rotina corrida", "Acompanhamento próximo"],
     highlight: true,
     whatsappText: "Olá! Quero contratar o plano Premium da V&I Nutri Fit.",
   },
@@ -37,11 +37,11 @@ const testimonials = [
   {
     name: "Rafael Lima",
     result: "Mais definição e rotina organizada",
-    text: "Visual profissional, atendimento excelente e uma dieta realmente personalizada. Fez muita diferença no meu dia a dia.",
+    text: "Visual profissional, atendimento excelente e um plano alimentar realmente personalizado. Fez muita diferença no meu dia a dia.",
   },
   {
     name: "Juliana Costa",
-    result: "Constância sem dieta maluca",
+    result: "Constância sem estratégia improvável",
     text: "Finalmente encontrei algo elegante, simples de seguir e pensado para minha realidade. Recomendo muito.",
   },
 ];
@@ -98,12 +98,12 @@ export default function DietaPersonalizadaSite() {
           <span className="font-display text-lg font-bold tracking-wider text-foreground">V&I <span className="text-gradient-primary">NUTRI FIT</span></span>
           <div className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
             <a href="#beneficios" className="transition hover:text-primary">Benefícios</a>
-            <a href="#planos" className="transition hover:text-primary">Planos</a>
+            <a href="#planos" className="transition hover:text-primary">Plano</a>
             <a href="#resultados" className="transition hover:text-primary">Resultados</a>
             <a href="#contato" className="transition hover:text-primary">Contato</a>
           </div>
           <a href="#planos" className="rounded-full bg-gradient-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:scale-105">
-            Quero meu plano
+            Começar agora
           </a>
         </div>
       </nav>
@@ -111,18 +111,18 @@ export default function DietaPersonalizadaSite() {
       {/* Hero */}
       <section className="relative overflow-hidden pt-24">
         <div className="bg-gradient-hero absolute inset-0" />
-        <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:py-32">
+        <div className="relative mx-auto grid max-w-6xl gap-8 px-6 py-20 md:grid-cols-2 md:items-center md:gap-12 md:py-32">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.span variants={fadeUp} className="mb-4 inline-block rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-medium tracking-wider text-primary">
-              NUTRIÇÃO DE ALTO PADRÃO
+              ESTRATÉGIA ALIMENTAR DE ALTO PADRÃO
             </motion.span>
-            <motion.h1 variants={fadeUp} className="mb-6 font-display text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
-              Sua dieta <span className="text-gradient-primary">personalizada</span> com elegância
+            <motion.h1 variants={fadeUp} className="mb-6 font-display text-3xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
+              Pare de falhar em dietas.
             </motion.h1>
-            <motion.p variants={fadeUp} className="mb-8 max-w-lg text-lg text-muted-foreground">
-              Um plano alimentar sofisticado, individual e adaptado à sua rotina. Para quem deseja emagrecer, ganhar massa ou viver melhor.
+            <motion.p variants={fadeUp} className="mb-8 max-w-lg text-base text-muted-foreground md:text-lg">
+              Tenha um plano alimentar feito para sua rotina, simples, acessível e possível de seguir.
             </motion.p>
-            <motion.div variants={fadeUp} className="mb-8 flex flex-wrap gap-3">
+            <motion.div variants={fadeUp} className="mb-8 flex flex-wrap gap-2 md:gap-3">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs text-primary">
                 <span className="h-1.5 w-1.5 animate-pulse-soft rounded-full bg-primary" /> 10 vagas esta semana
               </span>
@@ -130,24 +130,24 @@ export default function DietaPersonalizadaSite() {
                 Atendimento individual
               </span>
             </motion.div>
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-              <a href="#planos" className="rounded-full bg-gradient-primary px-7 py-3.5 font-semibold text-primary-foreground transition hover:scale-105 hover:shadow-glow">
-                Ver planos e começar
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-3 md:gap-4">
+              <a href="#planos" className="rounded-full bg-gradient-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:scale-105 hover:shadow-glow md:px-7 md:py-3.5 md:text-base">
+                Começar agora
               </a>
-              <a href={getWhatsappUrl("Olá! Vim pelo site da V&I Nutri Fit.")} target="_blank" rel="noopener noreferrer" className="rounded-full border border-border bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground transition hover:bg-muted">
+              <a href={getWhatsappUrl("Olá! Vim pelo site da V&I Nutri Fit.")} target="_blank" rel="noopener noreferrer" className="rounded-full border border-border bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground transition hover:bg-muted md:px-7 md:py-3.5 md:text-base">
                 Falar no WhatsApp
               </a>
             </motion.div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative hidden md:block">
+          <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative order-last">
             <div className="absolute -inset-4 rounded-3xl bg-primary/5 blur-3xl" />
-            <img src={heroFood} alt="Refeição saudável premium" className="relative rounded-2xl shadow-card" />
-            <div className="absolute -bottom-4 -left-4 glass rounded-xl p-4">
-              <p className="text-2xl font-bold text-foreground">100%</p>
+            <img src={heroFood} alt="Refeição saudável premium" className="relative rounded-2xl shadow-card w-full h-auto" />
+            <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 glass rounded-xl p-2 md:p-4">
+              <p className="text-lg md:text-2xl font-bold text-foreground">100%</p>
               <p className="text-xs text-muted-foreground">Personalizado</p>
             </div>
-            <div className="absolute -right-4 -top-4 glass rounded-xl p-4">
-              <p className="text-2xl font-bold text-primary">Premium</p>
+            <div className="absolute -right-2 -top-2 md:-right-4 md:-top-4 glass rounded-xl p-2 md:p-4">
+              <p className="text-lg md:text-2xl font-bold text-primary">Premium</p>
               <p className="text-xs text-muted-foreground">Visual profissional</p>
             </div>
           </motion.div>
@@ -159,7 +159,7 @@ export default function DietaPersonalizadaSite() {
         <div className="mx-auto max-w-6xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mb-14 text-center">
             <motion.h2 variants={fadeUp} className="mb-3 font-display text-3xl font-bold text-foreground md:text-4xl">Benefícios</motion.h2>
-            <motion.p variants={fadeUp} className="text-muted-foreground">Mais do que uma dieta. Uma experiência personalizada.</motion.p>
+            <motion.p variants={fadeUp} className="text-muted-foreground">Mais do que um plano. Uma experiência alimentar personalizada.</motion.p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((b) => (
@@ -188,7 +188,7 @@ export default function DietaPersonalizadaSite() {
                 <h3 className="mb-2 font-display text-xl font-bold text-foreground">{plan.name}</h3>
                 <p className="mb-6 text-sm text-muted-foreground">{plan.description}</p>
                 <p className="mb-1 text-4xl font-bold text-foreground">{plan.price}</p>
-                <p className="mb-6 text-xs text-muted-foreground">pagamento único</p>
+                <p className="mb-6 text-xs text-muted-foreground">Você pode pagar via PIX ou cartão (até 6x)</p>
                 <ul className="mb-8 space-y-3">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -215,7 +215,7 @@ export default function DietaPersonalizadaSite() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mb-14 grid gap-6 sm:grid-cols-3">
             {[
-              ["+120", "planos entregues"],
+              ["+120", "plano entregues"],
               ["4.9/5", "média de satisfação"],
               ["Resultados reais", "com rotina possível"],
             ].map(([number, label]) => (
@@ -273,7 +273,8 @@ export default function DietaPersonalizadaSite() {
 
       {/* Footer */}
       <footer className="border-t border-border px-6 py-8 text-center text-sm text-muted-foreground">
-        © 2026 V&I NUTRI FIT — Dieta personalizada com sofisticação, estratégia e resultado.
+        <p>© 2026 V&I NUTRI FIT — Plano alimentar personalizado com sofisticação, estratégia e resultado.</p>
+        <p className="mt-3 text-xs text-muted-foreground/80">Este serviço não substitui acompanhamento médico ou nutricional profissional. As orientações fornecidas são baseadas em hábitos alimentares e estilo de vida.</p>
       </footer>
     </div>
   );
